@@ -1,0 +1,22 @@
+﻿@model Game
+
+<input asp-for="Codigo" />
+<div class="mb-3">
+	<label asp-for="Nome"></label>
+	<input asp-for="Nome" class="form-control"/>
+</div>
+<div class="mb-3">
+	<label asp-for="Descricao"></label>
+	<input asp-for="Descricao" class="form-control" />
+</div>
+<div class="mb-3">
+	<label asp-for="Genero"></label>
+	<select asp-for="Genero" class="form-select"
+			asp-items="@Html.GetEnumSelectList<Genero>()">
+		<option>Selecione</option>
+	</select>
+</div>
+<div class="mb-3">
+	<label asp-for="Valor"></label>
+	<input asp-for="Valor" class="form-control" />
+</div>

@@ -1,0 +1,14 @@
+﻿@model Game
+@{
+	ViewData["Title"] = "Edição de Game";
+}
+
+<h1>Edição de Game</h1>
+
+<mensagem texto="@TempData["msg"]"></mensagem>
+
+<form asp-action="editar">
+	<partial name="_Form"/>
+	<botao texto="Editar"></botao>
+	<a asp-action="index" class="btn btn-light">Cancelar</a>
+</form>

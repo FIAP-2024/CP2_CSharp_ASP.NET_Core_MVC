@@ -1,0 +1,69 @@
+﻿@model List<Game>
+
+@{
+    ViewData["Title"] = "Games";
+}
+
+@section Banner {
+    <div class="alert alert-info text-center">
+        Gostaria de comprar jogos e jogar na nuvem? Clique aqui!
+    </div>
+}
+
+<h1>Games</h1>
+
+<mensagem texto="@TempData["msg"]" class="alert alert-danger"></mensagem>
+
+<a asp-action="cadastrar" class="btn btn-sm btn-outline-danger">Cadastrar</a>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Descricao</th>
+        <th>Gênero</th>
+        <th>Valor</th>
+        <th>Data de Compra</th>
+    </tr>
+    @foreach(var c in Model)
+{
+    <tr>
+            <td>@c.Nome</td>
+            <td>@c.Descricao</td>
+            <td>@c.Genero</td>
+            <td>@c.Valor</td>
+            <td>@c.DataCompra</td>
+
+            <td>
+                <!--Link que envia o ID do Game que será atualizado-->
+                <a asp-action="editar" class="btn btn-sm btn-outline-primary"
+                    asp-route-id="@c.Codigo">Editar</a>
+                <!-- Button trigger modal -->
+                <button onclick="gameId.value = @c.Codigo" type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Remover
+                </button>
+            </td>
+        </tr>
+}
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Deseja realmente apagar o game?
+      </div>
+      <div class="modal-footer">
+        <form asp-action="remover">
+                    <input name="id" type="hidden" id="gameId" />
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+            <button type="submit" class="btn btn-danger">Sim</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
