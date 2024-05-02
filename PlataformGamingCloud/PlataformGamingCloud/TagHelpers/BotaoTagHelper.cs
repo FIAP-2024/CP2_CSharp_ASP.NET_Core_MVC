@@ -1,20 +1,23 @@
 ﻿using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace PlatformGamingCloud.TagHelpers;
-
-public class BotaoTagHelper : TagHelper
+namespace PlatformGamingCloud.TagHelpers
 {
-    public string? Texto { get; set; } = "Cadastrar";
-
-    public override void Process(TagHelperContext context, TagHelperOutput output)
+    //Tag: <botao></botao>
+    //Tag resultado: <button class="btn btn-primary">Cadastrar</button>
+    public class BotaoTagHelper : TagHelper
     {
-        // Definir o nome da tag HTML
-        output.TagName = "button";
+        public string? Texto { get; set; } = "Cadastrar";
 
-        // Definir os atributos da tag HTML
-        output.Attributes.SetAttribute("class", "btn btn-primary");
+        public override void Process(TagHelperContext context, TagHelperOutput output)
+        {
+            // Definir o nome da tag HTML
+            output.TagName = "button";
 
-        // Definir o conteúdo da tag HTML
-        output.Content.SetContent(Texto);
+            // Definir os atributos da tag HTML
+            output.Attributes.SetAttribute("class", "btn btn-primary");
+
+            // Definir o conteúdo da tag HTML
+            output.Content.SetContent(Texto);
+        }
     }
 }

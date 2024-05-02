@@ -9,7 +9,7 @@ public class Game
     public int Codigo { get; set; }
     public string? Nome { get; set; }
     public string? Descricao { get; set; }
-    public DateTime DataCompra = DateTime.Now;
+    public DateTime DataCompra { get; set; } = DateTime.Now;
 
     [Display(Name ="Gênero")]
     public Genero? Genero { get; set; }

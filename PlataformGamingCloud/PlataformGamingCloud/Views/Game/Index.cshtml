@@ -1,7 +1,7 @@
 ﻿@model List<Game>
 
 @{
-    ViewData["Title"] = "Games";
+    ViewData["Title"] = "Listas de Jogos";
 }
 
 @section Banner {
@@ -10,7 +10,7 @@
     </div>
 }
 
-<h1>Games</h1>
+<h1>Listas de Jogos</h1>
 
 <mensagem texto="@TempData["msg"]" class="alert alert-danger"></mensagem>
 
@@ -19,7 +19,7 @@
 <table class="table">
     <tr>
         <th>Nome</th>
-        <th>Descricao</th>
+        <th>Descrição</th>
         <th>Gênero</th>
         <th>Valor</th>
         <th>Data de Compra</th>
@@ -55,7 +55,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Deseja realmente apagar o game?
+        Deseja realmente apagar o jogo?
       </div>
       <div class="modal-footer">
         <form asp-action="remover">
