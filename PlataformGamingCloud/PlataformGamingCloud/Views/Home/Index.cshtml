@@ -2,10 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Platform of Gaming in Cloud</h1>
-    
-    <div class="container-games">
-        <a asp-controller="game" asp-action="cadastrar">Cadastro de Jogos</a>
-    </div>
-</div>
+<section class="section-game-home">
+        <h1>Platform of <span class="slogan-home">Gaming</span> in Cloud</h1>
+
+        <div class="content-button-home">
+            <div class="box-button">
+                <a asp-area="" asp-controller="Game" asp-action="Cadastrar"><img src="~/img/ico-game.svg" alt="Icon Company" class="icon-button" /></a>
+                <a asp-area="" asp-controller="Game" asp-action="Cadastrar" class="button-link">Cadastrar Jogos</a>
+            </div>
+            <div class="box-button">
+                <a asp-area="" asp-controller="Game" asp-action="Index"><img src="~/img/ico-listar.svg" alt="Icon Company" class="icon-button" /></a>
+            <a asp-area="" asp-controller="Game" asp-action="Index" class="button-link">Listar Jogos</a>
+            </div>
+        </div>
+
+</section>

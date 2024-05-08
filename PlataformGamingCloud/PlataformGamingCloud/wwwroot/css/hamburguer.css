@@ -1,6 +1,6 @@
 /* CSS for the menu-nav */
 .menu-nav {
-    padding: 0.5rem;
+    padding: 0.5rem 3rem;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -35,6 +35,10 @@
 }
 
 /* CSS for the navigation links */
+
+.menu-nav {
+    background-color: #000;
+}
 
 .menu-nav .menu-logo {
     padding-top: 0.3125rem;

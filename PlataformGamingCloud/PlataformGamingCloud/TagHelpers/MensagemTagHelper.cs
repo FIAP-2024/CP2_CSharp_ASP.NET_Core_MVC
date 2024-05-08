@@ -5,7 +5,7 @@ namespace PlatformGamingCloud.TagHelpers;
 public class MensagemTagHelper : TagHelper
 {
     public string? Texto { get; set; }
-    public string? Class { get; set; } = "alert alert-sucess";
+    public string? Class { get; set; } = "content-alert-sucess";
 
     public override void Process(TagHelperContext context, TagHelperOutput output)
     {

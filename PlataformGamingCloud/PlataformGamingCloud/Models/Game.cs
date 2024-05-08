@@ -9,7 +9,7 @@ public class Game
     public int GameId { get; set; }
     public string? Nome { get; set; }
     public string? Descricao { get; set; }
-    public DateTime DataCompra { get; set; } = DateTime.Now;
+    public DateTime DataCreated { get; set; } = DateTime.Now;
 
     [Display(Name ="Gênero")]
     public Genero? Genero { get; set; }

@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
-using PlatformGamingCloud.Persistencia;
+// using PlatformGamingCloud.Persistencia;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var conn = builder.Configuration.GetConnectionString("conexao");
+// var conn = builder.Configuration.GetConnectionString("conexao");
 
-builder.Services.AddDbContext<GestaoPlatformContext>(o => o.UseSqlServer(conn));
+// builder.Services.AddDbContext<GestaoPlatformContext>(o => o.UseSqlServer(conn));
 
 var app = builder.Build();
 
