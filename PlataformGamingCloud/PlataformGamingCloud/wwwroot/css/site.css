@@ -23,10 +23,9 @@ body {
 
 /* Componentes Gerais */
 
-    h1, h2 {
+h1, h2 {
     font-size: calc(1.375rem + 1.5vw);
     color: #ffffff;
-
 }
 
 p, a {
@@ -73,6 +72,7 @@ header {
 }
 
 .footer-content {
+    background: #5C0A6D;
     backdrop-filter: blur(10px);
     height: 100px;
     display: flex;

@@ -8,3 +8,6 @@ function showConfirmOverlay() {
 function hideConfirmOverlay() {
     confirmOverlay[0].style.display = "none";
 }
+
+buttonRemove[0].addEventListener("click", showConfirmOverlay);
+buttonConfirm[0].addEventListener("click", hideConfirmOverlay);

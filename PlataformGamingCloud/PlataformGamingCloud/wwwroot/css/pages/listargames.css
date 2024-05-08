@@ -21,9 +21,6 @@ table, tbody {
 
 tr {
     display: table-header-group;
-}
-
-tr.table-head {
     background-color: #2b2828;
     color: #b4a5a5;
 }
