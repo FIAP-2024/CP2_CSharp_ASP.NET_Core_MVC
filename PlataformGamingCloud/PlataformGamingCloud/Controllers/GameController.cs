@@ -20,7 +20,7 @@ public class GameController : Controller
     public IActionResult Cadastrar(Game game)
     {
         //Setar o código do game
-        game.Codigo = ++_id;
+        game.GameId = ++_id;
         //Adicionar o game na lista
         _lista.Add(game);
         //Mandar uma mensagem de sucesso para a view
@@ -41,7 +41,7 @@ public class GameController : Controller
     public IActionResult Editar(int id)
     {
         //Recuperar a posição do game na lista através do id
-        var index = _lista.FindIndex(c => c.Codigo == id);
+        var index = _lista.FindIndex(c => c.GameId == id);
         //Recuperar o game através do ID
         var game = _lista[index];
         //Enviar o game para a view
@@ -52,7 +52,7 @@ public class GameController : Controller
     public IActionResult Editar(Game game)
     {
         //Atualizar o game na lista
-        var index = _lista.FindIndex(c => c.Codigo == game.Codigo);
+        var index = _lista.FindIndex(c => c.GameId == game.GameId);
         //Substitui o objeto na posição do game antigo
         _lista[index] = game;
         //Mensagem de sucesso
@@ -66,7 +66,7 @@ public class GameController : Controller
     public IActionResult Remover(int id)
     {
         //Remover o game da lista
-        _lista.RemoveAt(_lista.FindIndex(c => c.Codigo == id));
+        _lista.RemoveAt(_lista.FindIndex(c => c.GameId == id));
         //Mensagem de sucesso
         TempData["msg"] = "Game removido!";
         //Redirecionar para a listagem

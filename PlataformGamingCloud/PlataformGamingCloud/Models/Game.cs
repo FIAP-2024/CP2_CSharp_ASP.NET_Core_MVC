@@ -6,7 +6,7 @@ namespace PlatformGamingCloud.Models;
 public class Game
 {
     [HiddenInput]
-    public int Codigo { get; set; }
+    public int GameId { get; set; }
     public string? Nome { get; set; }
     public string? Descricao { get; set; }
     public DateTime DataCompra { get; set; } = DateTime.Now;

@@ -4,39 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Platform of Gaming in Cloud</title>
-    <link rel="stylesheet" href="https://bootswatch.com/5/vapor/bootstrap.min.css" />
-    <!--<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />-->
     <link rel="stylesheet" href="~/css/reset.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/hamburguer.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/PlatformGamingCloud.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Gaming in Cloud</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home
-                                <span class="visually-hidden">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Games</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" asp-action="cadastrar" asp-controller="game">Cadastrar</a></li>
-                                <li><a class="dropdown-item" asp-action="index" asp-controller="game">Listar</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
-                        </li>
-                    </ul>
+        <nav class="menu-nav">
+            <div class="menu-nav-content">
+                <!--<img src="~/img/Greenway_Text.png" alt="Logo Greenway" />-->
+                <a class="menu-logo" asp-area="" asp-controller="Home" asp-action="Index">Gaming Cloud</a>
+                <button class="menu-hamburguer" onclick="toggleMenu()"><img src="~/img/ico-hamburguer.svg" alt=""></button>
+                <div class="menu-items-content">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+
+                    <div class="dropdown">
+                        <a class="dropbtn">Game<span class="dropdown-icon"></span></a>
+                        <div class="dropdown-content">
+                            <a asp-area="" asp-controller="Game" asp-action="Cadastrar"><img src="~/img/ico-cadastrar.svg" alt="" class="icon-item-dropdown">Cadastrar</a>
+                            <div class="dropdown-content-divisor"></div>
+                            <a asp-area="" asp-controller="Game" asp-action="Index"><img src="~/img/ico-listar.svg" alt="" class="icon-item-dropdown">Listar</a>
+                        </div>
+                    </div>
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a>
                 </div>
             </div>
         </nav>
@@ -56,8 +50,8 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/hamburguer.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

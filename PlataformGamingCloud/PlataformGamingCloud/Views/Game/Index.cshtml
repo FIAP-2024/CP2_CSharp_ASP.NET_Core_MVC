@@ -36,9 +36,9 @@
             <td>
                 <!--Link que envia o ID do Game que será atualizado-->
                 <a asp-action="editar" class="btn btn-sm btn-outline-primary"
-                    asp-route-id="@c.Codigo">Editar</a>
+                    asp-route-id="@c.GameId">Editar</a>
                 <!-- Button trigger modal -->
-                <button onclick="gameId.value = @c.Codigo" type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button onclick="gameId.value = @c.GameId" type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   Remover
                 </button>
             </td>
