@@ -4,13 +4,13 @@
     ViewData["Title"] = "Cadastro de Jogos";
 }
 
-<h1>Cadastro de Jogos</h1>
+<section class="section-cadastrar-game">
+    <h1>Cadastro de Jogos</h1>
 
-<mensagem texto="@TempData["msg"]"></mensagem>
-
-<form asp-action="cadastrar">
-    <!--Adicionar o conteúdo do arquivo _Form.cshtml-->
-    <partial name="_Form" />
-    <botao></botao>
-    <a asp-action="index" class="btn btn-dark">Lista de Games</a>
-</form>
+    <form asp-action="cadastrar">
+        <!--Adicionar o conteúdo do arquivo _Form.cshtml-->
+        <partial name="_Form" />
+        <button type="submit" class="button-cadastrar">Cadastrar</button>
+        <a asp-action="index" class="button-listar">Lista de Games</a>
+    </form>
+</section>
