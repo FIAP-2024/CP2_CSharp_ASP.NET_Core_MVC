@@ -9,5 +9,11 @@ function hideConfirmOverlay() {
     confirmOverlay[0].style.display = "none";
 }
 
-buttonRemove[0].addEventListener("click", showConfirmOverlay);
-buttonConfirm[0].addEventListener("click", hideConfirmOverlay);
+// Adiciona o EventListener a todos os botões de classe "button-link-remover"
+for (let i = 0; i < buttonRemove.length; i++) {
+    buttonRemove[i].addEventListener("click", showConfirmOverlay);
+}
+
+for (let i = 0; i < buttonConfirm.length; i++) {
+    buttonConfirm[i].addEventListener("click", hideConfirmOverlay);
+}

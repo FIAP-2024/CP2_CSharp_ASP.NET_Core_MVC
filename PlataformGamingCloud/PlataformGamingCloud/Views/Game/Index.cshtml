@@ -8,9 +8,10 @@
 
     <a asp-action="cadastrar" class="button-link-cadastrar">Cadastrar Novo</a>
 
-    <div>
+    <div class="content-table">
         <table class="table">
             <tr class="table-head">
+                <th class="table-title">ID</th>
                 <th class="table-title">Nome</th>
                 <th class="table-title">Descrição</th>
                 <th class="table-title">Gênero</th>
@@ -21,6 +22,7 @@
             @foreach (var c in Model)
             {
                 <tr>
+                    <td class="table-content">@c.GameId</td>
                     <td class="table-content">@c.Nome</td>
                     <td class="table-content">@c.Descricao</td>
                     <td class="table-content">@c.Genero</td>
