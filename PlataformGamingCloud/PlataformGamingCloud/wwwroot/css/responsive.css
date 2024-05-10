@@ -142,6 +142,7 @@
 
 
     .menu-nav .menu-items-content {
+        width: 100%;
         display: none;
         flex-direction: column;
         align-items: flex-start;

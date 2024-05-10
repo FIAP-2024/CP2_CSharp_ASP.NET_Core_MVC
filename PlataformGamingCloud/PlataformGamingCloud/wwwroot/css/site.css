@@ -1,6 +1,8 @@
 html {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     font-size: 14px;
-    
 }
 
 @media (min-width: 768px) {
@@ -15,24 +17,35 @@ html {
 }
 
 body {
-    border: 0;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    border: 0;
     box-sizing: border-box;
-    overflow: hidden;
-    height: 64vh;
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/games/spider-man2.png") 50% center no-repeat fixed;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+
     font-family: Inter;
-    background: url("../img/games/spider-man2.png") 50% center no-repeat fixed transparent;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+
 }
 
 /* Componentes Gerais */
 
 h1, h2 {
+    margin-top: 20px;
+    text-shadow: 4px 3px 4px black;
+    text-align: center;
     font-size: calc(1.375rem + 1.5vw);
     color: #ffffff;
 }
 
-p, a {
+a, p {
     text-decoration: none;
     color: #cdcdcd;
     transition: all 0.4s;
@@ -64,25 +77,26 @@ header {
 }
 
 .main-content {
-    backdrop-filter: blur(10px);
     width: 100%;
-    height: 100%;
-    padding: 10vh 0 10vh 0;
-
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .footer-content {
-    background: #5C0A6D;
-    backdrop-filter: blur(10px);
+    width: 100%;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center; 
+    padding: 0 20px;
+
+    background: #5C0A6D;
     border-top: 2px solid #e5e5e5;
+    margin-top: 20px;
 }
 
 .footer-container {
