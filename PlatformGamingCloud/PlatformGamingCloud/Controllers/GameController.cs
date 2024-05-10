@@ -23,8 +23,8 @@ public class GameController : Controller
 
         if (games.Count == 0)
         {
-            // Se nenhum jogo for encontrado, você pode retornar uma mensagem de erro ou redirecionar para uma página de erro
-            View("Nenhum Jogo Encontrado!!");
+            // Caso nenhum jogo for encontrado
+            TempData["msg"] = "Nenhum Jogo Encontrado!!";
             return RedirectToAction("Index");
         }
 

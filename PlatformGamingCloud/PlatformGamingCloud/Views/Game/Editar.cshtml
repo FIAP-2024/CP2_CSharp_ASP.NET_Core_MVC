@@ -5,11 +5,10 @@
 
 <section class="section-editar-game">
     <h1>Edição de <span class="slogan-home">Jogos</span></h1>
+    <p class="content-alert-sucess" id="alert-message">@TempData["msg"]</p>
 
     <form asp-action="editar" class="form-content-game">
         <partial name="_Form" />
-
-        <mensagem texto="@TempData["msg"]"></mensagem>
 
         <div class="form-content-button">
             <button type="submit" class="button-input">Editar</button>
