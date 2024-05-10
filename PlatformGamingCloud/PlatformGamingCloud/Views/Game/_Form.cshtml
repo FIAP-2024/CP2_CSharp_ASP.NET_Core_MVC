@@ -2,25 +2,25 @@
 
 <input type="hidden" asp-for="GameId" />
 <div class="form-box-game">
-    <label asp-for="Nome" class="form-label-game"></label>
+    <label asp-for="Nome" class="form-label-game">Nome</label>
     <input asp-for="Nome" class="form-items-game" placeholder="Digite o nome do jogo..." required />
 </div>
 <div class="form-box-game">
-    <label asp-for="Descricao" class="form-label-game"></label>
+    <label asp-for="Descricao" class="form-label-game">Descrição</label>
     <input asp-for="Descricao" class="form-items-game" placeholder="Digite a descrição do jogo..." required />
 </div>
 <div class="form-box-game">
-    <label asp-for="Genero" class="form-label-game"></label>
+    <label asp-for="Genero" class="form-label-game">Gênero</label>
     <select required asp-for="Genero" class="form-select-game"
             asp-items="@Html.GetEnumSelectList<Genero>()">
         <option class="form-option-game">Selecione o Gênero</option>
     </select>
 </div>
 <div class="form-box-game">
-    <label asp-for="DataLancamento" class="form-label-game"></label>
+    <label asp-for="DataLancamento" class="form-label-game">Data de Lançamento</label>
     <input asp-for="DataLancamento" type="date" class="form-items-game" required />
 </div>
 <div class="form-box-game">
-    <label asp-for="Valor" class="form-label-game"></label>
+    <label asp-for="Valor" class="form-label-game">Valor</label>
     <input asp-for="Valor" class="form-items-game" placeholder="R$ 0,00" required />
 </div>

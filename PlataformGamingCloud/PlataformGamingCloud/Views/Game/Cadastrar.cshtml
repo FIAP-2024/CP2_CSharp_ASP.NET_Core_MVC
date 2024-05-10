@@ -1,0 +1,21 @@
+﻿@model Game
+
+@{
+    ViewData["Title"] = "Cadastro de Jogos";
+}
+
+<section class="section-cadastrar-game">
+    <h1>Cadastro de <span class="slogan-home">Jogos</span></h1>
+    <mensagem texto="@TempData["msg"]"></mensagem>
+
+
+    <form asp-action="cadastrar" class="form-content-game">
+        <partial name="_Form" />
+
+
+        <div class="form-content-button">
+            <button type="submit" class="button-input">Cadastrar Jogos</button>
+            <a asp-action="index" class="button-input">Lista de Games</a>
+        </div>
+    </form>
+</section>

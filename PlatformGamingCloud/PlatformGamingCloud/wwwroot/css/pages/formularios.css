@@ -7,17 +7,20 @@
     align-items: center;
 }
 
-.slogan-cadastrar {
-    color: #A822C3;
-}
-
 .form-content-game {
+<<<<<<< HEAD:PlatformGamingCloud/PlatformGamingCloud/wwwroot/css/pages/formularios.css
     width: 65%;
+=======
+    width: 100%;
+>>>>>>> development:PlataformGamingCloud/PlataformGamingCloud/wwwroot/css/pages/formularios.css
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD:PlatformGamingCloud/PlatformGamingCloud/wwwroot/css/pages/formularios.css
     height: auto;
+=======
+>>>>>>> development:PlataformGamingCloud/PlataformGamingCloud/wwwroot/css/pages/formularios.css
 }
 
 .form-box-game {
