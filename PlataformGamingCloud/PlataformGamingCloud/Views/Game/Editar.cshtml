@@ -3,12 +3,17 @@
 	ViewData["Title"] = "Edição de Game";
 }
 
-<h1>Edição de Game</h1>
 
 <mensagem texto="@TempData["msg"]"></mensagem>
 
-<form asp-action="editar">
-	<partial name="_Form"/>
-	<button type="submit" class="button-editar">Editar</button>
-	<a asp-action="index" class="button-cancelar">Cancelar</a>
-</form>
+<section class="section-editar-game">
+    <h1>Cadastro de Jogos</h1>
+    <h1>Edição de Game</h1>
+
+
+    <form asp-action="editar" class="form-editar-game">
+        <partial name="_Form" />
+        <button type="submit" asp-action="index" class="button-editar">Editar</button>
+        <a asp-action="index" class="button-cancelar">Cancelar</a>
+    </form>
+</section>
