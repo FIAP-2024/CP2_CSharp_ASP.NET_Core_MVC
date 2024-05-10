@@ -1,12 +1,13 @@
 ﻿@model List<Game>
 
-@{
-    ViewData["Title"] = "Listas de Jogos";
-}
 <section class="section-listar-game">
     <h1>Listas de <span class="slogan-home">Jogos</span></h1>
+    <p class="content-alert-sucess" id="alert-message">@TempData["msg"]</p>
 
-    <a asp-action="cadastrar" class="button-link-cadastrar">Cadastrar Novo</a>
+    <div class="container-buttons">
+        <a asp-action="cadastrar" class="button-link-cadastrar">Cadastrar Novo</a>
+        <a asp-action="Index" class="button-back-list">Voltar a Lista de Jogos</a>
+    </div>
 
     <div class="content-table">
         <table class="table">
@@ -17,7 +18,6 @@
                 <th class="table-title">Data de Lançamento</th>
                 <th class="table-title">Valor</th>
                 <th class="table-title">Data de Criação</th>
-
             </tr>
             @foreach (var c in Model)
             {
@@ -54,7 +54,7 @@
             <form asp-action="remover">
                 <input name="id" type="hidden" id="gameId" />
                 <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">Não</button>
-                <button type="submit" class="button-confirm" onclick="hideConfirmOverlay()">Sim</button>
+                <button type="submit" class="button-confirm" id="button-submit" onclick="hideConfirmOverlay()">Sim</button>
             </form>
         </div>
     </div>

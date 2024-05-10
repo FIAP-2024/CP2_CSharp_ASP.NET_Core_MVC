@@ -8,11 +8,19 @@
 }
 
 .form-content-game {
+<<<<<<< HEAD:PlatformGamingCloud/PlatformGamingCloud/wwwroot/css/pages/formularios.css
+    width: 65%;
+=======
     width: 100%;
+>>>>>>> development:PlataformGamingCloud/PlataformGamingCloud/wwwroot/css/pages/formularios.css
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD:PlatformGamingCloud/PlatformGamingCloud/wwwroot/css/pages/formularios.css
+    height: auto;
+=======
+>>>>>>> development:PlataformGamingCloud/PlataformGamingCloud/wwwroot/css/pages/formularios.css
 }
 
 .form-box-game {
@@ -53,7 +61,8 @@
     border: 4px solid #9c15b8;
 }
 
-.form-content-button{
+.form-content-button {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

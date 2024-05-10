@@ -1,0 +1,37 @@
+name: .NET
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    # Adicionando uma etapa para imprimir o conteúdo do diretório atual
+    - name: List files in current directory
+      run: ls -al
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore PlatformGamingCloud/PlatformGamingCloud/PlatformGamingCloud.csproj
+      
+    - name: Build
+      run: |
+        cd PlatformGamingCloud/PlatformGamingCloud
+        dotnet build --no-restore
+        
+    - name: Test
+      run: |
+        cd PlatformGamingCloud/PlatformGamingCloud
+        dotnet test --no-build --verbosity normal
