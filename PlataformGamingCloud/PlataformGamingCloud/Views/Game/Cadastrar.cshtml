@@ -10,9 +10,12 @@
     <form asp-action="cadastrar" class="form-content-game">
         <!--Adicionar o conteúdo do arquivo _Form.cshtml-->
         <partial name="_Form" />
+
+        <mensagem texto="@TempData["msg"]"></mensagem>
+
         <div class="form-content-button">
-            <button type="submit" class="button-cadastrar">Cadastrar Jogos</button>
-            <a asp-action="index" class="button-listar">Lista de Games</a>
+            <button type="submit" class="button-input">Cadastrar Jogos</button>
+            <a asp-action="index" class="button-input">Lista de Games</a>
         </div>
     </form>
 </section>

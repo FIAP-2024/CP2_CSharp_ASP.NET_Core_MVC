@@ -11,12 +11,16 @@
 </div>
 <div class="form-box-game">
     <label asp-for="Genero" class="form-label-game"></label>
-    <select asp-for="Genero" class="form-select-game"
-            asp-items="@Html.GetEnumSelectList<Genero>()" required>
+    <select required asp-for="Genero" class="form-select-game"
+            asp-items="@Html.GetEnumSelectList<Genero>()">
         <option class="form-option-game">Selecione o Gênero</option>
     </select>
 </div>
 <div class="form-box-game">
+    <label asp-for="DataLancamento" class="form-label-game"></label>
+    <input asp-for="DataLancamento" type="date" class="form-items-game" required />
+</div>
+<div class="form-box-game">
     <label asp-for="Valor" class="form-label-game"></label>
-    <input asp-for="Valor" class="form-items-game" placeholder="R$ 0" required />
+    <input asp-for="Valor" class="form-items-game" placeholder="R$ 0,00" required />
 </div>

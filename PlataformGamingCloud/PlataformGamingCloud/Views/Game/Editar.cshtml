@@ -6,12 +6,14 @@
 <section class="section-editar-game">
     <h1>Edição de <span class="slogan-home">Jogos</span></h1>
 
-    <form asp-action="editar" class="form-editar-game">
+    <form asp-action="editar" class="form-content-game">
         <partial name="_Form" />
 
         <mensagem texto="@TempData["msg"]"></mensagem>
 
-        <button type="submit" asp-action="index" class="button-editar">Editar</button>
-        <a asp-action="index" class="button-cancelar">Cancelar</a>
+        <div class="form-content-button">
+            <button type="submit" asp-action="index" class="button-input">Editar</button>
+            <a asp-action="index" class="button-input">Cancelar</a>
+        </div>
     </form>
 </section>

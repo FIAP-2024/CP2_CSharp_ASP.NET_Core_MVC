@@ -4,17 +4,17 @@
     ViewData["Title"] = "Listas de Jogos";
 }
 <section class="section-listar-game">
-    <h1>Listas de <span class="slogan-lista">Jogos</span></h1>
+    <h1>Listas de <span class="slogan-home">Jogos</span></h1>
 
     <a asp-action="cadastrar" class="button-link-cadastrar">Cadastrar Novo</a>
 
     <div class="content-table">
         <table class="table">
             <tr class="table-head">
-                <th class="table-title">ID</th>
                 <th class="table-title">Nome</th>
                 <th class="table-title">Descrição</th>
                 <th class="table-title">Gênero</th>
+                <th class="table-title">Data de Lançamento</th>
                 <th class="table-title">Valor</th>
                 <th class="table-title">Data de Criação</th>
 
@@ -22,11 +22,11 @@
             @foreach (var c in Model)
             {
                 <tr>
-                    <td class="table-content">@c.GameId</td>
                     <td class="table-content">@c.Nome</td>
                     <td class="table-content">@c.Descricao</td>
                     <td class="table-content">@c.Genero</td>
-                    <td class="table-content">@c.Valor</td>
+                    <td class="table-content">@c.DataLancamento</td>
+                    <td class="table-content">R$ @c.Valor?.ToString("N2")</td>
                     <td class="table-content">@c.DataCreated</td>
                     <td class="table-content">
                         <div class="button-container">
@@ -45,7 +45,7 @@
     <div class="confirm-content">
         <div class="confirm-header">
             <h5 class="confirm-title">Confirmação</h5>
-            <button type="button" class="button-confirm" onclick="hideConfirmOverlay">X</button>
+            <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">X</button>
         </div>
         <div class="confirm-body">
             Deseja realmente apagar o jogo?
