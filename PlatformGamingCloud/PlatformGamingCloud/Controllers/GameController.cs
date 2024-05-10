@@ -9,13 +9,6 @@ public class GameController : Controller
     private static List<Game> _lista = new List<Game>();
     private static int _id = 0; //Controla o ID
 
-    // Create
-    [HttpGet] //Abrir a página com o formulário HTML
-    public IActionResult Cadastrar()
-    {
-        return View();
-    }
-
     [HttpGet] //Abrir o formulário com os dados preenchidos
     public IActionResult PesquisaNome(string searchString)
     {
@@ -37,6 +30,13 @@ public class GameController : Controller
 
         // Se os jogos forem encontrados, envie-os para a visualização de índice
         return View("Index", games);
+    }
+
+    // Create
+    [HttpGet] //Abrir a página com o formulário HTML
+    public IActionResult Cadastrar()
+    {
+        return View();
     }
 
     [HttpPost]

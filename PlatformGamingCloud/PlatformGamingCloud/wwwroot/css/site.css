@@ -107,13 +107,13 @@ header {
 
 /* TAGHELPER */
 
-mensagem.content-alert-success {
-    display: flex;
+#alert-message{
+    width: 100%;
+    background: #0a6d11;
+
+    display: none;
     justify-content: center;
     align-items: center;
-    background: #0a6d11;
-    border-radius: 50px;
-    width: 14vw;
     padding: 12px;
     margin-top: 20px;
     color: #ffffff;

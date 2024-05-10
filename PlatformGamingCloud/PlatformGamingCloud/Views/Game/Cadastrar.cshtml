@@ -8,14 +8,10 @@
     <h1>Cadastro de <span class="slogan-home">Jogos</span></h1>
     
     <form asp-action="cadastrar" class="form-content-game">
-        <!--Adicionar o conteúdo do arquivo _Form.cshtml-->
         <partial name="_Form" />
-
-
         <div class="form-content-button">
-            <a asp-action="index" class="button-input">Lista de Games</a>
             <button type="submit" class="button-input" onclick="showConfirmOverlay()">Cadastrar Jogos</button>
-            <mensagem>@TempData["msg"]</mensagem>
+            <a asp-action="index" class="button-input">Lista de Games</a>
         </div>
     </form>
 </section>
@@ -27,7 +23,7 @@
             <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">X</button>
         </div>
         <div class="confirm-body">
-            <mensagem>@TempData["msg"]</mensagem>
+            <p>@TempData["msg"]</p>
         </div>
         <div class="confirm-footer">
             <form >
@@ -35,4 +31,4 @@
             </form>
         </div>
     </div>
-</div>
+</div>s
