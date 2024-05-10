@@ -1,0 +1,24 @@
+﻿.section-privacy-policy{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px
+}
+
+.section-privacy-paragraph {
+    background-color: #000;
+    border-radius: 50px;
+    padding: 20px;
+    width: 45%;
+    font-size: 24px;
+    text-align: center;
+    color: #cdcdcd;
+}
+
+@media (max-width: 736px){
+    .section-privacy-paragraph {
+        width: 80%;
+    }
+}
