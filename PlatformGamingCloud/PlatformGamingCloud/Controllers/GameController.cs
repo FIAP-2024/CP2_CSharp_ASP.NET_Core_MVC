@@ -36,6 +36,7 @@ public class GameController : Controller
     [HttpGet] //Abrir a página com o formulário HTML
     public IActionResult Cadastrar()
     {
+        ViewBag.teste = "Teste";
         return View();
     }
 
@@ -48,6 +49,8 @@ public class GameController : Controller
         _lista.Add(game);
         //Mandar uma mensagem de sucesso para a view
         TempData["msg"] = "Jogo cadastrado com sucesso!";
+
+        //return View();
         //Redireciona para o método Cadastrar
         return RedirectToAction("Cadastrar");
     }

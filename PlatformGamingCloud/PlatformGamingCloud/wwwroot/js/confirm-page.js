@@ -17,9 +17,5 @@ for (let i = 0; i < buttonRemove.length; i++) {
 }
 
 function showAlertMessage() {
-    document.getElementById("alert-message").style.display = "flex";
-}
-
-function hideAlertMessage() {
-    setTimeout(document.getElementById("alert-message").style.display = "none", 5000)
+    document.getElementById("content-alert-sucess").style.display = "flex";
 }

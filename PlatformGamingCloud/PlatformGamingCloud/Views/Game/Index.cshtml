@@ -2,7 +2,9 @@
 
 <section class="section-listar-game">
     <h1>Listas de <span class="slogan-home">Jogos</span></h1>
-    <p class="content-alert-sucess" id="alert-message">@TempData["msg"]</p>
+    <div class="content-alert-sucess" id="content-alert-sucess">
+        <p id="alert-message">@TempData["msg"]</p>
+    </div>
 
     <div class="container-buttons">
         <a asp-action="cadastrar" class="button-link-cadastrar">Cadastrar Novo</a>
@@ -54,7 +56,7 @@
             <form asp-action="remover">
                 <input name="id" type="hidden" id="gameId" />
                 <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">Não</button>
-                <button type="submit" class="button-confirm" id="button-submit" onclick="hideConfirmOverlay()">Sim</button>
+                <button type="submit" class="button-confirm" id="button-submit" onclick="hideConfirmOverlay(); showAlertMessage">Sim</button>
             </form>
         </div>
     </div>
