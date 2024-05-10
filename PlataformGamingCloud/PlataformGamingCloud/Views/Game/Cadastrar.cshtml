@@ -6,12 +6,13 @@
 
 <section class="section-cadastrar-game">
     <h1>Cadastro de <span class="slogan-home">Jogos</span></h1>
+    <mensagem texto="@TempData["msg"]"></mensagem>
+
 
     <form asp-action="cadastrar" class="form-content-game">
         <!--Adicionar o conteúdo do arquivo _Form.cshtml-->
         <partial name="_Form" />
 
-        <mensagem texto="@TempData["msg"]"></mensagem>
 
         <div class="form-content-button">
             <button type="submit" class="button-input">Cadastrar Jogos</button>

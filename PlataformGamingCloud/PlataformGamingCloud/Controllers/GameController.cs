@@ -24,7 +24,7 @@ public class GameController : Controller
         //Adicionar o game na lista
         _lista.Add(game);
         //Mandar uma mensagem de sucesso para a view
-        TempData["msg"] = "Game cadastrado!";
+        TempData["msg"] = "Jogo cadastrado!";
         //Redireciona para o método Cadastrar
         return RedirectToAction("Cadastrar");
     }
@@ -56,7 +56,7 @@ public class GameController : Controller
         //Substitui o objeto na posição do game antigo
         _lista[index] = game;
         //Mensagem de sucesso
-        TempData["msg"] = "Game atualizado!";
+        TempData["msg"] = "Jogo atualizado!";
         //Redirect para a listagem/editar
         return RedirectToAction("editar");
     }
@@ -68,7 +68,7 @@ public class GameController : Controller
         //Remover o game da lista
         _lista.RemoveAt(_lista.FindIndex(c => c.GameId == id));
         //Mensagem de sucesso
-        TempData["msg"] = "Game removido!";
+        TempData["msg"] = "Jogo removido!";
         //Redirecionar para a listagem
         return RedirectToAction("Index");
     }
