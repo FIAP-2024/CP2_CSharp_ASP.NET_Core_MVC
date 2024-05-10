@@ -33,6 +33,12 @@
                         </div>
                     </div>
                     <a asp-area="" asp-controller="Home" asp-action="Privacy" class="menu-items-link">Privacidade</a>
+                    <div class="container-search">
+                        <form method="get" asp-action="PesquisaNome" asp-controller="Game" class="header-form-search">
+                            <input type="search" class="input-search" placeholder="Pesquisar..." aria-label="Search" name="searchString">
+                            <button type="submit" class="button-search-ico"><img class="search-ico" src="~/img/ico-search.svg" alt="Icone de Pesquisa" /></button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </nav>

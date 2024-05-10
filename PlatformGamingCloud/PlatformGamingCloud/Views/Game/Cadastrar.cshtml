@@ -6,17 +6,33 @@
 
 <section class="section-cadastrar-game">
     <h1>Cadastro de <span class="slogan-home">Jogos</span></h1>
-    <mensagem texto="@TempData["msg"]"></mensagem>
-
-
+    
     <form asp-action="cadastrar" class="form-content-game">
         <!--Adicionar o conteúdo do arquivo _Form.cshtml-->
         <partial name="_Form" />
 
 
         <div class="form-content-button">
-            <button type="submit" class="button-input">Cadastrar Jogos</button>
             <a asp-action="index" class="button-input">Lista de Games</a>
+            <button type="submit" class="button-input" onclick="showConfirmOverlay()">Cadastrar Jogos</button>
+            <mensagem>@TempData["msg"]</mensagem>
         </div>
     </form>
 </section>
+
+<div class="confirm-overlay">
+    <div class="confirm-content">
+        <div class="confirm-header">
+            <h5 class="confirm-title">Mensagem</h5>
+            <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">X</button>
+        </div>
+        <div class="confirm-body">
+            <mensagem>@TempData["msg"]</mensagem>
+        </div>
+        <div class="confirm-footer">
+            <form >
+                <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">Ok</button>
+            </form>
+        </div>
+    </div>
+</div>

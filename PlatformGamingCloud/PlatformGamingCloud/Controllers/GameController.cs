@@ -16,6 +16,29 @@ public class GameController : Controller
         return View();
     }
 
+    [HttpGet] //Abrir o formulário com os dados preenchidos
+    public IActionResult PesquisaNome(string searchString)
+    {
+        if (string.IsNullOrEmpty(searchString))
+        {
+            // Se a string de pesquisa estiver vazia, redireciona para a lista de jogos
+            return RedirectToAction("Index");
+        }
+
+        // Procura jogos que correspondam ao termo de pesquisa (insensível a maiúsculas e minúsculas)
+        var games = _lista.Where(c => c.Nome!.Contains(searchString, StringComparison.OrdinalIgnoreCase)).ToList();
+
+        if (games.Count == 0)
+        {
+            // Se nenhum jogo for encontrado, você pode retornar uma mensagem de erro ou redirecionar para uma página de erro
+            View("Nenhum Jogo Encontrado!!");
+            return RedirectToAction("Index");
+        }
+
+        // Se os jogos forem encontrados, envie-os para a visualização de índice
+        return View("Index", games);
+    }
+
     [HttpPost]
     public IActionResult Cadastrar(Game game)
     {
@@ -24,7 +47,7 @@ public class GameController : Controller
         //Adicionar o game na lista
         _lista.Add(game);
         //Mandar uma mensagem de sucesso para a view
-        TempData["msg"] = "Jogo cadastrado!";
+        TempData["msg"] = "Jogo cadastrado com sucesso!";
         //Redireciona para o método Cadastrar
         return RedirectToAction("Cadastrar");
     }
@@ -56,7 +79,7 @@ public class GameController : Controller
         //Substitui o objeto na posição do game antigo
         _lista[index] = game;
         //Mensagem de sucesso
-        TempData["msg"] = "Jogo atualizado!";
+        TempData["msg"] = "Jogo atualizado com sucesso!";
         //Redirect para a listagem/editar
         return RedirectToAction("editar");
     }
@@ -68,7 +91,7 @@ public class GameController : Controller
         //Remover o game da lista
         _lista.RemoveAt(_lista.FindIndex(c => c.GameId == id));
         //Mensagem de sucesso
-        TempData["msg"] = "Jogo removido!";
+        TempData["msg"] = "Jogo removido com sucesso!";
         //Redirecionar para a listagem
         return RedirectToAction("Index");
     }

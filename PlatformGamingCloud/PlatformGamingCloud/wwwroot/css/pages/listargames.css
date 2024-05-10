@@ -7,6 +7,19 @@
     gap: 20px;
 }
 
+/* CONTAINER DE BOTÕES */
+
+.container-buttons {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* TABELA DE INFORMAÇÕES */
+
 .content-table{
     overflow-x: auto;
     border-radius: 20px;
@@ -79,6 +92,7 @@ tr {
     border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
+    transition: all 0.6s;
 }
 
 .button-link-cadastrar:hover, .button-link-editar:hover, .button-link-remover:hover {
