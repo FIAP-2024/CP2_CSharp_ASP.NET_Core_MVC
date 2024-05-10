@@ -29,12 +29,10 @@
                     <td class="table-content">@c.Valor</td>
                     <td class="table-content">@c.DataCreated</td>
                     <td class="table-content">
-                        <!--Link que envia o ID do Game que será atualizado-->
-                        <a asp-action="editar" class="button-link-editar" asp-route-id="@c.GameId">Editar</a>
-                    </td>
-                    <td class="table-content">
-                        <!-- Button trigger modal -->
-                        <a class="button-link-remover" onclick="gameId.value = @c.GameId">Remover</a>
+                        <div class="button-container">
+                            <a asp-action="editar" class="button-link-editar" asp-route-id="@c.GameId">Editar</a>
+                            <a class="button-link-remover" onclick="gameId.value = @c.GameId">Remover</a>
+                        </div>                        
                     </td>
                 </tr>
             }
@@ -47,7 +45,7 @@
     <div class="confirm-content">
         <div class="confirm-header">
             <h5 class="confirm-title">Confirmação</h5>
-            <button type="button" class="button-close"></button>
+            <button type="button" class="button-confirm" onclick="hideConfirmOverlay">X</button>
         </div>
         <div class="confirm-body">
             Deseja realmente apagar o jogo?
