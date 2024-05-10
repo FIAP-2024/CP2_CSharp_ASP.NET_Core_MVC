@@ -9,7 +9,7 @@
 
 .content-table{
     overflow-x: auto;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .content-table::-webkit-scrollbar {
@@ -25,10 +25,6 @@
     background-color: #9c15b8; /* color of the scroll thumb */
     border-radius: 20px; /* roundness of the scroll thumb */
     border: 3px solid #000; /* creates padding around scroll thumb */
-}
-
-.slogan-lista {
-    color: #A822C3;
 }
 
 table, tbody {
@@ -90,12 +86,31 @@ tr {
     color: #A822C3;
 }
 
+@media (max-width: 1085px) {
+    .content-table {
+        width: 85%;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button-link-editar,
+    .button-link-remover {
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+    }
+}
+
 /* Confirmação de Exclusão */
 
 .confirm-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     
     display: none;
     justify-content: center;
