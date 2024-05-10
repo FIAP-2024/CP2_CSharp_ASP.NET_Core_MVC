@@ -15,6 +15,10 @@ html {
 }
 
 body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     overflow: hidden;
     height: 64vh;
     font-family: Inter;

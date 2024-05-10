@@ -5,12 +5,14 @@
 }
 
 <section class="section-cadastrar-game">
-    <h1>Cadastro de Jogos</h1>
+    <h1>Cadastro de <span class="slogan-home">Jogos</span></h1>
 
     <form asp-action="cadastrar" class="form-content-game">
         <!--Adicionar o conteúdo do arquivo _Form.cshtml-->
         <partial name="_Form" />
-        <button type="submit" class="button-cadastrar">Cadastrar Jogos</button>
-        <a asp-action="index" class="button-listar">Lista de Games</a>
+        <div class="form-content-button">
+            <button type="submit" class="button-cadastrar">Cadastrar Jogos</button>
+            <a asp-action="index" class="button-listar">Lista de Games</a>
+        </div>
     </form>
 </section>

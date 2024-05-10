@@ -7,16 +7,16 @@
 </div>
 <div class="form-box-game">
     <label asp-for="Descricao" class="form-label-game"></label>
-    <input asp-for="Descricao" class="form-items-game" placeholder="Digite a descrição do jogo..." />
+    <input asp-for="Descricao" class="form-items-game" placeholder="Digite a descrição do jogo..." required />
 </div>
 <div class="form-box-game">
     <label asp-for="Genero" class="form-label-game"></label>
     <select asp-for="Genero" class="form-select-game"
-            asp-items="@Html.GetEnumSelectList<Genero>()">
-        <option>Selecione o Gênero</option>
+            asp-items="@Html.GetEnumSelectList<Genero>()" required>
+        <option class="form-option-game">Selecione o Gênero</option>
     </select>
 </div>
 <div class="form-box-game">
     <label asp-for="Valor" class="form-label-game"></label>
-    <input asp-for="Valor" class="form-items-game" placeholder="R$ 0" />
+    <input asp-for="Valor" class="form-items-game" placeholder="R$ 0" required />
 </div>
