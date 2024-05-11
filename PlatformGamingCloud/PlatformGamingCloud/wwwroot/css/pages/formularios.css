@@ -1,6 +1,6 @@
 ﻿/* Estilos para o formulário de cadastro de jogos */
 .section-cadastrar-game, .section-editar-game {
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,8 +8,7 @@
 }
 
 .form-content-game {
-    height: 70vh;
-    width: 100%;
+    width: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,6 +16,7 @@
     gap: 10px;
     background-color: #5c0a6d;
     border-radius: 69px;
+    padding: 20px;
 }
 .form-box-game {
     width: 70%;
