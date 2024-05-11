@@ -168,11 +168,15 @@ public IActionResult Remover(int id)
 }
 ```
 
-
 ![image](https://github.com/FIAP-2024/CP2_CSharp_ASP.NET_Core_MVC/assets/80494196/33132768-2a5a-4ec4-817d-5e0a22fd0fc6)
 
 - ### Tela de privacidade
 Esta política de privacidade descreve como tratamos as informações pessoais coletadas e utilizadas em nossa plataforma.
 
 ![image](https://github.com/FIAP-2024/CP2_CSharp_ASP.NET_Core_MVC/assets/80494196/ec8d01a0-5e47-43ff-9ed7-ced657eb7ab8)
+
+## Classe Principal
+
+![image](https://github.com/FIAP-2024/CP2_CSharp_ASP.NET_Core_MVC/assets/80494196/f0a2c06e-a5c1-4e42-a18c-6e84a93cdc55)
+
 
